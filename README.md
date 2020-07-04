@@ -1,23 +1,23 @@
 # Selenium-demo
 Find an item in a website and print it to the console using Selenium.  
   
-Usage example:  
-# Create an object  
+#Usage example:  
+Create an object:  
 url = 'https://www.amazon.com/'  
 example = AmazonExample(url)  
   
-# Display departments list  
+Display departments list:  
 example.print_departments()  
   
-# Select department to search an item  
+Select department to search an item:  
 department = 'Sports & Outdoors'  
   
 item = 'basketball'  
 
-# Sort items by price low to high (see documentation in the code)  
+Sort items by price low to high (see documentation in the code):  
 sort_price_by = 1  
 
-# Select the second item (zero based)  
+Select the second item (zero based):  
 item_index = 1  
   
 example.search_item(department, item, sort_price_by)  
