@@ -19,8 +19,9 @@ sort_price_by = 1
 
 Select the second item (zero based):  
 item_index = 1  
+delim = 'string to split into separate items'  
   
 example.search_item(department, item, sort_price_by)  
-example.get_item_by_index(item_index)  
+example.get_item_by_index(item_index, delim)  
  
 
