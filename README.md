@@ -1,5 +1,5 @@
 # Selenium-demo
-Find an item in a website and print it to the console using Selenium.  
+Find an item in Amazon website and print it to the console using Selenium.  
   
 # Usage example:  
 Create an object:  
