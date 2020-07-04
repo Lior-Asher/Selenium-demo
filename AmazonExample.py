@@ -6,10 +6,10 @@ class AmazonExample:
     def __init__(self, url):
         self.driver = webdriver.Chrome()
         self.url = url
-        # Navigate to Amazon website
+        # Navigate to the website
         self.driver.get(self.url)
 
-    # Display departments list to choose from
+    # Display departments list
     def print_departments(self):        
         search_drop_down = self.driver.find_element_by_id('searchDropdownBox')
         for option in search_drop_down.find_elements_by_tag_name('option'):
@@ -51,7 +51,6 @@ class AmazonExample:
                 option.click()
                 break
 
-        # Search an item
         search_box = self.driver.find_element_by_id('twotabsearchtextbox')
         search_box.send_keys(item_to_find)
         search_btn = self.driver.find_element_by_class_name('nav-input') 
@@ -60,13 +59,15 @@ class AmazonExample:
         # sort the items
         self.sort_items(sort_price_by)
 
-
     # Select item to print by index
     # First item's index is 0
-    def get_item_by_index(self, index):
+    # Parameters:
+    #   Item index
+    #   Delimiter to split string of items
+    def get_item_by_index(self, index, delim):
         sleep(3) # Give page componenets time to load
         page_items = self.driver.find_elements_by_class_name('sg-col-inner') # Items on the page, basketballs is this demo
         
         # page_items[3]: index 3 are the items in the center of the page
-        items = page_items[3].text.split('Ships to Israel') # Split string on delimiter
+        items = page_items[3].text.split(delim) # Split string by delimiter
         print(items[index])
