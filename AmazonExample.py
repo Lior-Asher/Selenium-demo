@@ -70,19 +70,3 @@ class AmazonExample:
         # page_items[3]: index 3 are the items in the center of the page
         items = page_items[3].text.split('Ships to Israel') # Split string on delimiter
         print(items[index])
-
-
-# Create an 'AutoLogin' object, then call the login function
-# Otherwise the browser closes as soon as the login is complete
-url = 'https://www.amazon.com/'
-go = AmazonExample(url)
-
-# go.print_departments()
-department = 'Sports & Outdoors'
-item = 'basketball'
-sort_price_by = 1
-item_index = 1
-go.search_item(department, item, sort_price_by)
-go.get_item_by_index(item_index)
-
-
