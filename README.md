@@ -1,7 +1,7 @@
 # Selenium-demo
 Find an item in a website and print it to the console using Selenium.  
   
-#Usage example:  
+# Usage example:  
 Create an object:  
 url = 'https://www.amazon.com/'  
 example = AmazonExample(url)  
